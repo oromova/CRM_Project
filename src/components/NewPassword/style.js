@@ -2,57 +2,57 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  background-color: white;
-`;
+`
 
 export const Wrapper = styled.div`
   width: 430px;
-  height: 414px;
+  height: 550px;
   padding: 12px 20px 12px 20px;
-`;
+`
 
-export const Title = styled.div`
+export const Title = styled.div `
   font-family: Inter;
   font-size: 28px;
   font-weight: 500;
   line-height: 38px;
   text-align: center;
-  color: #1f1f1f;
-`;
-
-Title.Main = styled(Title)``;
+  color: rgb(31, 31, 31);
+`
+Title.Main = styled(Title)``
 
 Title.Description = styled(Title)`
+  color: rgb(140, 140, 140);
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
-  color: #8c8c8c;
-`;
-
+  color: rgb(140, 140, 140);
+`
 Title.Label = styled(Title)`
   font-size: 14px;
   line-height: 20px;
   text-align: left;
-  margin-top: 32px;
-  margin-bottom: 4px;
   .star {
     color: red;
   }
-`;
-
+`
 export const Input = styled.input`
   outline: none;
   width: 100%;
   height: 48px;
-  padding: 8px 12px;
   box-sizing: border-box;
-  margin: 4px 0px;
-  border: 1px solid rgb(208, 215, 222);
+  border: 1px solid rgb(187, 195, 205);
   border-radius: 8px;
-`;
-
+  background: rgb(255, 255, 255);
+  padding: 6px 12px 6px 12px;
+  margin: 4px 0px;
+`
+export const Test = styled(Title.Description)`
+  margin-top: 8px;
+  margin-bottom: 8px;
+`
 export const Button = styled.button`
   width: 100%;
   height: 48px;
@@ -67,5 +67,3 @@ export const Button = styled.button`
     cursor: pointer;
   }
 `;
-
-
