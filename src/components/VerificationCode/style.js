@@ -20,6 +20,7 @@ export const Title = styled.div`
   text-align: center;
   color: rgb(31, 31, 31);
 `;
+
 Title.Main = styled(Title)`
   margin-bottom: 16px;
 `;
@@ -33,15 +34,10 @@ Title.Description = styled(Title)`
   margin-bottom: 32px;
 `;
 
-Title.Label = styled(Title)`
-  font-size: 14px;
-  line-height: 20px;
-  text-align: left;
-  .star {
-    color: red;
-  }`
-
-
+export const Display = styled.div`
+  display: flex;
+  margin: 32px 0px;
+`
 
 export const Button = styled.button`
   width: 100%;
@@ -58,3 +54,35 @@ export const Button = styled.button`
   }
 `;
 
+export const Subtitle = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(10, 13, 20);
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: left;
+  text-decoration-line: underline;
+  margin-top: 4px;
+`
+
+export const Code = styled.div`
+  width: 88.5px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 12px 16px 12px 16px;
+  margin: 0px 12px;
+  box-sizing: border-box;
+  border: 1px solid rgb(226, 228, 233);
+  border-radius: 12px;
+  background: rgb(255, 255, 255);
+
+  `
