@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
-// import { ReactComponent as analitika} from '../../assets/icons/analitika.svg'
 
 export const Container = styled.div`
   position: relative;
 `;
+
 export const Wrapper = styled.div`
   position: absolute;
   width: 280px;
@@ -20,6 +20,7 @@ export const CommonStyle = css`
   font-weight: 500;
   line-height: 20px;
 `;
+
 export const H1 = styled.h1`
   color: rgb(24, 144, 255);
   font-size: 20px;
@@ -36,6 +37,16 @@ export const UserBlock = styled.div`
   margin-right: 24px;
 `;
 
+export const UserOn = styled.div`
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  left: 58px;
+  top: 121px;
+  background: rgb(82, 196, 26);
+  border-radius: 50%;
+`
+
 export const UserName = styled.div`
   width: 168px;
   height: 20px;
@@ -45,6 +56,7 @@ export const UserName = styled.div`
   color: rgb(248, 250, 252);
   font-weight: 600;
 `;
+
 export const UserMail = styled.div`
   ${CommonStyle};
   font-size: 12px;
@@ -61,6 +73,7 @@ export const SidebarList = styled.div`
   border-bottom: 1px solid #253e5f;
   padding-bottom: 10px;
 `;
+
 export const SidebarListLi = styled.a`
   width: 100%;
   height: 44px;
@@ -71,7 +84,6 @@ export const SidebarListLi = styled.a`
     color: rgb(248, 250, 252);
     ${CommonStyle}
     margin-left: 20px;
-    
   }
 
   &:hover {
@@ -89,11 +101,6 @@ export const Icons = styled.div``;
 Icons.User = styled.img`
   margin-right: 16px;
 `;
-
-// Icons.Analytics = styled(analitika)`
-//   width: 17px;
-//   height: 17px;
-// `;
 
 Icons.Icon = styled.img`
   width: 17px;
@@ -113,4 +120,5 @@ export const Settings = styled(SidebarListLi)`
 export const Edit = styled(Settings)`
   position: fixed;
   bottom: 0;
+  width: 280px;
 `;

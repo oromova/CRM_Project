@@ -1,16 +1,16 @@
 import React from 'react'
-import { Container, Wrapper, H1, UserBlock, UserName, UserMail, SidebarList, SidebarListLi, Settings, Edit, Icons} from '../Sidebar/Sidebar';
+import { Container, Wrapper, H1, UserBlock, UserName, UserMail, SidebarList, SidebarListLi, Settings, Edit, Icons, UserOn} from '../Sidebar/Sidebar';
 import user from '../../assets/img/sidebar/user.png'
-import analitika from '../../assets/icons/analitika.svg'
-import buyurtma from '../../assets/icons/buyurtma.svg'
-import moliya from '../../assets/icons/moliya.svg'
-import talaba from '../../assets/icons/talaba.svg'
-import guruhlar from '../../assets/icons/guruhlar.svg'
-import kurslar from '../../assets/icons/kurslar.svg'
-import hr from '../../assets/icons/hr.svg'
-import settings from '../../assets/icons/settings.svg'
-import edit from '../../assets/icons/edit.svg'
-import arrowRight from '../../assets/icons/arrowRight.svg'
+import analitika from '../../assets/icons/sidebar/analitika.svg'
+import buyurtma from '../../assets/icons/sidebar/buyurtma.svg'
+import moliya from '../../assets/icons/sidebar/moliya.svg'
+import talaba from '../../assets/icons/sidebar/talaba.svg'
+import guruhlar from '../../assets/icons/sidebar/guruhlar.svg'
+import kurslar from '../../assets/icons/sidebar/kurslar.svg'
+import hr from '../../assets/icons/sidebar/hr.svg'
+import settings from '../../assets/icons/sidebar/settings.svg'
+import edit from '../../assets/icons/sidebar/edit.svg'
+import arrowRight from '../../assets/icons/sidebar/arrowRight.svg'
 
 export const Sidebar = () => {
 
@@ -21,6 +21,7 @@ export const Sidebar = () => {
         <hr style={{border: '1px solid rgb(37, 62, 95)'}}/>
         <UserBlock>
         <Icons.User src={user}/>
+        <UserOn/>
           <div>
             <UserName>Sardorbek Muhtorov</UserName>
             <UserMail>s.muhtorov@gmail.com</UserMail>
