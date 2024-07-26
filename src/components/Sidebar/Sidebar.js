@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+// import { ReactComponent as analitika} from '../../assets/icons/analitika.svg'
 
 export const Container = styled.div`
   position: relative;
@@ -60,25 +61,56 @@ export const SidebarList = styled.div`
   border-bottom: 1px solid #253e5f;
   padding-bottom: 10px;
 `;
-export const SidebarListLi = styled.div`
+export const SidebarListLi = styled.a`
   width: 100%;
   height: 44px;
- 
-  p{
+  display: flex;
+  align-items: center;
+
+  p {
     color: rgb(248, 250, 252);
     ${CommonStyle}
     margin-left: 20px;
+    
   }
+
   &:hover {
     cursor: pointer;
     background-color: #253e5f;
     color: #1890ff;
+    p{
+      color: rgb(24, 144, 255);
+    }
   }
 `;
+
+export const Icons = styled.div``;
+
+Icons.User = styled.img`
+  margin-right: 16px;
+`;
+
+// Icons.Analytics = styled(analitika)`
+//   width: 17px;
+//   height: 17px;
+// `;
+
+Icons.Icon = styled.img`
+  width: 17px;
+  height: 17px;
+  margin-left: 27px;
+`;
+
+Icons.Arrow = styled.img`
+  position: absolute;
+  right: 30px;
+`;
+
 export const Settings = styled(SidebarListLi)`
   margin-top: 24px;
 `;
+
 export const Edit = styled(Settings)`
   position: fixed;
   bottom: 0;
-`
+`;
