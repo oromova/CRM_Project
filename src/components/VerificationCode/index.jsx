@@ -22,7 +22,6 @@ const VerificationCode = () => {
         <Title.Description style={{marginBottom:'4px'}}>Experiencing issues receiving the code?</Title.Description>
         <Subtitle>Resend code</Subtitle>
       </Wrapper>
-
     </Container>
   )
 }
