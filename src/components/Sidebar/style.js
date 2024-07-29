@@ -45,7 +45,7 @@ export const UserOn = styled.div`
   top: 121px;
   background: rgb(82, 196, 26);
   border-radius: 50%;
-`
+`;
 
 export const UserName = styled.div`
   width: 168px;
@@ -90,8 +90,11 @@ export const SidebarListLi = styled.a`
     cursor: pointer;
     background-color: #253e5f;
     color: #1890ff;
-    p{
+    p {
       color: rgb(24, 144, 255);
+    }
+    path {
+      fill: rgb(24, 144, 255);
     }
   }
 `;
@@ -100,17 +103,6 @@ export const Icons = styled.div``;
 
 Icons.User = styled.img`
   margin-right: 16px;
-`;
-
-Icons.Icon = styled.img`
-  width: 17px;
-  height: 17px;
-  margin-left: 27px;
-`;
-
-Icons.Arrow = styled.img`
-  position: absolute;
-  right: 30px;
 `;
 
 export const Settings = styled(SidebarListLi)`

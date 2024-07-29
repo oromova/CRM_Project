@@ -4,7 +4,7 @@ import NewPassword from "../components/NewPassword";
 import Reset from '../components/Reset'
 import VerificationCode from '../components/VerificationCode'
 import { useState } from "react";
-import Sidebar from "../components/Sidebar/Sidebar.jsx";
+import Sidebar from "../components/Sidebar";
 
 export const Root = () => {
 
