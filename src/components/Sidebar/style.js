@@ -5,6 +5,8 @@ export const Container = styled.div`
 `;
 
 export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   position: absolute;
   width: 280px;
   height: 100vh;
@@ -29,42 +31,8 @@ export const H1 = styled.h1`
   margin: 16px 24px;
 `;
 
-export const UserBlock = styled.div`
-  display: flex;
-  margin-top: 22.5px;
-  margin-bottom: 20px;
-  margin-left: 24px;
-  margin-right: 24px;
-`;
-
-export const UserOn = styled.div`
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  left: 58px;
-  top: 121px;
-  background: rgb(82, 196, 26);
-  border-radius: 50%;
-`;
-
-export const UserName = styled.div`
-  width: 168px;
-  height: 20px;
-  padding: 0px;
-  margin: 2px 0px;
-  ${CommonStyle};
-  color: rgb(248, 250, 252);
-  font-weight: 600;
-`;
-
-export const UserMail = styled.div`
-  ${CommonStyle};
-  font-size: 12px;
-  color: rgb(146, 159, 175);
-`;
-
 export const SidebarList = styled.div`
-  height: 330px;
+  height: fit-content;
   width: 100%;
   margin-top: 20px;
   display: flex;
@@ -74,16 +42,27 @@ export const SidebarList = styled.div`
   padding-bottom: 10px;
 `;
 
-export const SidebarListLi = styled.a`
+export const SidebarListLi = styled.div`
   width: 100%;
   height: 44px;
   display: flex;
   align-items: center;
 
+  .icon {
+    width: 17px;
+    height: 17px;
+    margin-left: 26px;
+  }
+
   p {
     color: rgb(248, 250, 252);
     ${CommonStyle}
     margin-left: 20px;
+  }
+
+  .arrowright {
+    position: absolute;
+    right: 30px;
   }
 
   &:hover {
@@ -99,18 +78,19 @@ export const SidebarListLi = styled.a`
   }
 `;
 
-export const Icons = styled.div``;
+export const Submenu = styled.div`
+  height: ${({ open }) => (open ? "fit-content" : "0px")};
+  overflow: hidden;
+`;
 
-Icons.User = styled.img`
-  margin-right: 16px;
+export const SubmenuItem = styled(SidebarListLi)`
+  font-size: 14px;
+  margin-left: 45px;
+  color: white;
+  padding-left: 17px;
 `;
 
 export const Settings = styled(SidebarListLi)`
   margin-top: 24px;
 `;
 
-export const Edit = styled(Settings)`
-  position: fixed;
-  bottom: 0;
-  width: 280px;
-`;

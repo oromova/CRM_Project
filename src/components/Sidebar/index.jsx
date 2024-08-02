@@ -1,48 +1,77 @@
-import React from 'react'
-import { Container, Wrapper, H1, UserBlock, UserName, UserMail, SidebarList, SidebarListLi, Settings, Edit, Icons, UserOn} from './style';
-import user from '../../assets/img/sidebar/user.png'
-import sidebarList from '../../mock/SidebarList';
-import { Arrow } from '../../mock/SidebarList';
+import React, { useState } from 'react'
+import { Container, Wrapper, H1, SidebarList, SidebarListLi, Submenu, SubmenuItem} from './style';
+import sidebarList from '../../utilts/SidebarList';
+import User from './User';
+import setting from '../../utilts/Settings';
+import edit from '../../utilts/Edit'
 
 export const Sidebar = () => {
+  const [open, setOpen] = useState([])
+
+  const onOpen = (id) => {
+    if(open.includes(id)){
+      let res = open.filter(val => val !== id)
+      setOpen(res)
+    }else setOpen([...open, id])
+  }
 
   return (
     <Container>
       <Wrapper>
         <H1>Webbrain.crm</H1>
         <hr style={{border: '1px solid rgb(37, 62, 95)'}}/>
-        <UserBlock>
-        <Icons.User src={user}/>
-        <UserOn/>
-          <div>
-            <UserName>Sardorbek Muhtorov</UserName>
-            <UserMail>s.muhtorov@gmail.com</UserMail>
-          </div>
-        </UserBlock>
+        <User/>
         <SidebarList>
-          {
-           sidebarList.map(({id, name, icon: Icon}) => {
+          {sidebarList.map(({id, name, icon: Icon, arrow: Arrow, child}) => {
             return(
-              <SidebarListLi key={id}>
-             <Icon/>
-              <p>{name}</p>
-            <Arrow/>
-            </SidebarListLi>
+              <div>
+                <SidebarListLi onClick={()=>onOpen(id)} key={id}>
+                <Icon className="icon"/>
+                <p>{name}</p>
+                {child && <Arrow className="arrowright"/>}
+                </SidebarListLi>
+                  {child && (
+                    <Submenu open={open.includes(id)}>
+                    {child.map((child) => {
+                        return <SubmenuItem key={child.id}>{child.name}</SubmenuItem>
+                    })}
+                    </Submenu>
+                  )}
+              </div>
             )
             })
           }
         </SidebarList>
-  
-        
-        {/* <Settings>
-          <Icons.Icon src={settings}/>
-          <p>Sozlamalar</p>
-         
-        </Settings>
-        <Edit>
-        <Icons.Icon src={edit}/>
-          <p>Chiqish</p>
-        </Edit> */}
+        {
+          setting.map(({id, title, icon: Icon, child, arrow: Arrow}) => {
+            return(
+              <div>
+                <SidebarListLi onClick={()=>onOpen(id)} key={id}>
+                <Icon className="icon"/>
+                <p key={id}>{title}</p>
+                {child && <Arrow className="arrowright"/>}
+                </SidebarListLi>
+                {child && (
+                <Submenu open={open.includes(id)}>
+                {child.map((child) => {
+                    return <SubmenuItem key={child.id}>{child.title}</SubmenuItem>
+                })}
+                </Submenu>
+              )}
+              </div>
+            )
+          })
+        }
+        { 
+        edit.map(({id, title, icon: Icon}) =>{
+          return(
+            <SidebarListLi key={id} style={{marginTop: 'auto', height: '67px', borderTop: '1px solid #253E5F'}}>
+              <Icon className="icon"/>
+              <p>{title}</p>
+            </SidebarListLi>
+          )
+        })
+        }
       </Wrapper>
     </Container>
   )
