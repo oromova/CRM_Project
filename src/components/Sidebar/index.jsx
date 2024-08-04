@@ -1,14 +1,15 @@
 import React, { useState } from 'react'
 import { Container, Wrapper, H1, SidebarList, SidebarListLi, Submenu, SubmenuItem} from './style';
-import sidebarList from '../../utilts/SidebarList';
+import sidebarList from '../../utils/SidebarList';
 import User from './User';
-import setting from '../../utilts/Settings';
-import edit from '../../utilts/Edit'
+import setting from '../../utils/Settings';
+import edit from '../../utils/Edit'
 
 export const Sidebar = () => {
   const [open, setOpen] = useState([])
 
   const onOpen = (id) => {
+    // localStorage.setItem('open', [sidebarList.map((val)=>val.id)])
     if(open.includes(id)){
       let res = open.filter(val => val !== id)
       setOpen(res)
