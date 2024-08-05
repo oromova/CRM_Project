@@ -1,5 +1,8 @@
-import { Container, Title, Wrapper, Input, Button } from "./style"
+import { Container, Title, Wrapper, Input, InputDiv, Button, Forgot,} from "./style"
 import { useState } from "react";
+import Email from '../../../assets/icons/Login/email.svg?react'
+import Lock from '../../../assets/icons/Login/lock.svg?react'
+import Visible from '../../../assets/icons/Login/eye.svg?react'
 
 export const Login = () => {
   const [state, setState] = useState('Login');
@@ -12,9 +15,18 @@ export const Login = () => {
         <Title.Main>Login to your account</Title.Main>
         <Title.Description>Enter your details to login.</Title.Description>
         <Title.Label>Email Address <span className="star">*</span></Title.Label>
-        <Input placeholder="Enter your email address"></Input>
+        <InputDiv>
+          <Email className="email"/>
+          <Input placeholder="Enter your email address"></Input>
+        </InputDiv>
+         
         <Title.Label>Email Address <span className="star">*</span></Title.Label>
-        <Input placeholder="**********"></Input>
+          <InputDiv>
+          <Lock className="email"/>
+          <Input type="password" placeholder="**********"></Input>
+          <Visible className="visible"/>
+          </InputDiv>      
+          <Forgot>Forgot password?</Forgot>  
         <Button active = {state ==="Login"} onClick={() => onToggle('Reset')}>Login</Button>
       </Wrapper>
     

@@ -9,11 +9,11 @@ export const Sidebar = () => {
   const [open, setOpen] = useState([])
 
   const onOpen = (id) => {
-    // localStorage.setItem('open', [sidebarList.map((val)=>val.id)])
-    if(open.includes(id)){
-      let res = open.filter(val => val !== id)
+    // localStorage.setItem('open', [sidebarList.map((val)=>)])
+    if (open.includes(id)){
+      let res = open.filter((val) => val !== id)
       setOpen(res)
-    }else setOpen([...open, id])
+    } else setOpen([...open, id])
   }
 
   return (

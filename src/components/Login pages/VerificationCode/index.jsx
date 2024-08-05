@@ -1,11 +1,7 @@
-import {Container, Wrapper, Title, Display, Button, Subtitle, Code} from "./style"
-import {useState} from 'react' 
+import { Button, Container, Title, Wrapper } from "../Login/style";
+import { Code, Display, Subtitle } from "./style";
 
 const VerificationCode = () => {
-  const [state, setState] = useState('Login');
-
-  const onToggle = (name) => setState(name);
-  console.log(state, "state");
   return (
     <Container>
       <Wrapper>
@@ -17,9 +13,9 @@ const VerificationCode = () => {
           <Code>9</Code>
           <Code>7</Code>
         </Display>
-        <Button active={state === "VerificationCode"
-     } onClick={() => onToggle("Login")}>Reset Password</Button>
-        <Title.Description style={{marginBottom:'4px'}}>Experiencing issues receiving the code?</Title.Description>
+        <Button>Reset Password</Button>
+        <Title.Description style={{marginBottom:'4px', marginTop: "0px"}}>
+          Experiencing issues receiving the code?</Title.Description>
         <Subtitle>Resend code</Subtitle>
       </Wrapper>
     </Container>
