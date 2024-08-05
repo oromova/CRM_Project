@@ -6,10 +6,12 @@ import setting from '../../utils/Settings';
 import edit from '../../utils/Edit'
 
 export const Sidebar = () => {
-  const [open, setOpen] = useState([])
+  const [open, setOpen] = useState(
+   [JSON.parse(localStorage.getItem('open'))])
 
   const onOpen = (id) => {
-    // localStorage.setItem('open', [sidebarList.map((val)=>)])
+    localStorage.setItem('open', JSON.stringify(id))
+
     if (open.includes(id)){
       let res = open.filter((val) => val !== id)
       setOpen(res)
@@ -25,8 +27,8 @@ export const Sidebar = () => {
         <SidebarList>
           {sidebarList.map(({id, name, icon: Icon, arrow: Arrow, child}) => {
             return(
-              <div>
-                <SidebarListLi onClick={()=>onOpen(id)} key={id}>
+              <div key={id}>
+                <SidebarListLi onClick={()=>onOpen(id)} >
                 <Icon className="icon"/>
                 <p>{name}</p>
                 {child && <Arrow className="arrowright"/>}
