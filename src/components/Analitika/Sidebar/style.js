@@ -1,20 +1,17 @@
 import styled, { css } from "styled-components";
 
 export const Container = styled.div`
-  position: relative;
 `;
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 280px;
   height: 100vh;
-  left: 0;
-  top: 0;
   box-shadow: 0px 8px 8px 0px rgb(245, 246, 248);
   background: rgb(22, 37, 57);
   border: 1px solid black;
+  position: relative;
 `;
 
 export const CommonStyle = css`

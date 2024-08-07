@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import { Container, Wrapper, H1, SidebarList, SidebarListLi, Submenu, SubmenuItem} from './style';
-import sidebarList from '../../utils/SidebarList';
+import sidebarList from '../../../utils/SidebarList';
 import User from './User';
-import setting from '../../utils/Settings';
-import edit from '../../utils/Edit'
+import setting from '../../../utils/Settings';
+import edit from '../../../utils/Edit'
 
 export const Sidebar = () => {
   const [open, setOpen] = useState(

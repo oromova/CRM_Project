@@ -1,4 +1,4 @@
-import user from '../../../assets/img/sidebar/user.png'
+import user from '../../../../assets/img/sidebar/user.png'
 import { UserBlock, UserName, UserOn, UserMail, Img } from './style'
 
 const User = () => {
