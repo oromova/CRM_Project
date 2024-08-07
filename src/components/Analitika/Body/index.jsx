@@ -1,16 +1,20 @@
 import React from 'react'
 import './style'
 
-import { Container } from './style'
+import { Container, H1, P } from './style'
 import { Navbar } from '../Navbar';
 import { Category } from './Category';
+import { SocialMedia } from './Media';
+
 
 export default function Body() {
   return (
     <Container>
       <Navbar/>
-      <h1 className='h1'>Analitika</h1>
+      <H1>Analitika</H1>
       <Category/>
+      <P>Ijtimoiy tarmoqlar</P>
+      <SocialMedia/>
     </Container>
      
    

@@ -3,8 +3,14 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   justify-content: space-around;
-  `
-
+`
+export const H1 = styled.h1`
+  margin-top: 19px;
+  margin-left: 24px;
+  color: rgb(37, 62, 95);
+  font-size: 20px;
+  font-weight: 600;
+`
 export const Wrapper = styled.div`
   background-color: ${({ color }) => color};
   padding: 10px 16px;
