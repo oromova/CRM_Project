@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   width: 280px;
   height: 100vh;
+  overflow-y: auto;
   box-shadow: 0px 8px 8px 0px rgb(245, 246, 248);
   background: rgb(22, 37, 57);
   border: 1px solid black;
@@ -44,7 +45,7 @@ export const SidebarListLi = styled.div`
   height: 44px;
   display: flex;
   align-items: center;
-
+  
   .icon {
     width: 17px;
     height: 17px;
@@ -73,6 +74,7 @@ export const SidebarListLi = styled.div`
       fill: rgb(24, 144, 255);
     }
   }
+ 
 `;
 
 export const Submenu = styled.div`

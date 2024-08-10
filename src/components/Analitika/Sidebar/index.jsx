@@ -68,7 +68,7 @@ export const Sidebar = () => {
         { 
         edit.map(({id, title, icon: Icon}) =>{
           return(
-            <SidebarListLi key={id} style={{marginTop: 'auto', height: '67px', borderTop: '1px solid #253E5F'}}>
+            <SidebarListLi key={id} style={{marginTop: 'auto', height: '28px', paddingTop: '16px', paddingBottom: '16px', borderTop: '1px solid #253E5F'}}>
               <Icon className="icon"/>
               <p>{title}</p>
             </SidebarListLi>

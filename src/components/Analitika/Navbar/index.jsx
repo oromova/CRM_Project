@@ -13,8 +13,8 @@ export const Navbar = () => {
      <Time>
         <Hour className="date"/>
      </Time>
-      <Date type='datetime-local' value={7} />
-    <NewDate />
+      {/* <Date type='datetime-local' value={7} /> */}
+    {/* <NewDate /> */}
     <Select className='lang' name="lang"> 
       <option value="uz">O'zbekcha</option>
       <option value="rus">Ruscha</option>

@@ -2,19 +2,24 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  gap: 24px;
+  width: 100%; 
+  margin-left: 10px;
+
 `
-export const H1 = styled.h1`
+
+export const TitleAnalitika= styled.h1`
   margin-top: 19px;
-  margin-left: 24px;
+  margin-left: 30px;
   color: rgb(37, 62, 95);
   font-size: 20px;
   font-weight: 600;
 `
+
 export const Wrapper = styled.div`
   background-color: ${({ color }) => color};
   padding: 10px 16px;
-  width: 334px;
+  width: 100%;
   height: 188px;
   border-radius: 8px;
   position: relative;
@@ -55,4 +60,9 @@ export const Number = styled.p`
   margin-left: 20px;
 `
 export const Img = styled.img`
+  display: inline;
+  border-radius: 50%;
+  width: 177px;
+  padding-right: 10px;
+  margin-left: auto;
 `
