@@ -6,6 +6,7 @@ import { Navbar } from '../Navbar';
 import { SocialMedia } from './Media';
 import { Category } from './Category';
 import { Emails } from './Emails';
+// import { Moliya } from './Moliya';
 
 
 export default function Body() {
@@ -14,7 +15,11 @@ export default function Body() {
       <Navbar/>
       <Category/>
       <SocialMedia/>
-      <Emails/>
+      <div style={{dislay: 'flex'}}>
+        <Emails/>
+        {/* <Moliya/>  */}
+      </div>
+    
     </Container>
   )
 }

@@ -12,9 +12,8 @@ import filial from '../../../../assets/img/statistics/filial.png'
 
 export const Category = () => {
   const [category, setCategory] = useState([])
-  
 
-  const url = 'https://sheet.best/api/sheets/2ce5a2e7-1ee2-44a3-844a-2ac19467465d/tabs/groups'
+  const url ='https://sheet.best/api/sheets/fa9a3f5f-3a6d-4a54-99c7-63772418a673/tabs/analytics_page/'
 
   useEffect(() => {
     fetch(url)

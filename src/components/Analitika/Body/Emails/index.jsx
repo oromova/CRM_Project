@@ -6,11 +6,10 @@ import img from '../../../../assets/img/email/email1.png'
 export const Emails = () => {
   const [emails, setEmails] = useState([])
 
-  const url = 'https://sheet.best/api/sheets/2ce5a2e7-1ee2-44a3-844a-2ac19467465d/tabs/roles'
-
+  const url = import.meta.env.VITE_BASE_URL
 
 useEffect(() => {
-  fetch(url)
+  fetch(`${url}/tabs/emails`, {})
   .then((res) => res.json())
   .then((res) => setEmails(res))
 }, []

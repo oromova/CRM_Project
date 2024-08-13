@@ -11,6 +11,8 @@ export const Container = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
+  overflow: hidden;
+  width: 100%;
 `
 
 export const Month = styled.div`
@@ -21,8 +23,9 @@ export const Month = styled.div`
   width: 82px;
   height: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
+ 
 `
 
 export const Day = styled.div`

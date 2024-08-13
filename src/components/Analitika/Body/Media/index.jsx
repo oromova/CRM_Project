@@ -14,10 +14,10 @@ import Down from '../../../../assets/icons/statistics/down.svg?react'
 export const SocialMedia = () => {
   const [media, setMedia] = useState([])
 
-  const url = 'https://sheet.best/api/sheets/2ce5a2e7-1ee2-44a3-844a-2ac19467465d/tabs/media'
+  const url = import.meta.env.VITE_BASE_URL
 
   useEffect(() => {
-    fetch(url)
+    fetch(`${url}/tabs/media`, {})
     .then((res) => res.json())
     .then((res) => setMedia(res))
   }, [])
