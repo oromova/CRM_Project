@@ -1,24 +1,36 @@
 import React from 'react'
-import { Input, InputDiv, Time, Wrapper, Date, Select} from './style';
+import { Input, InputDiv, Time, Wrapper, Select, WrapperTime, Data,} from './style';
 import SearchIcon from '../../../assets/icons/navbar/search.svg?react'
-import { Hour, NewDate } from '../../../utils/navbar';
+// import CurrentDay from '../../../utils/date';
 
+  
 export const Navbar = () => {
+  const time = new Date()
+
   return (
     <Wrapper>
      <InputDiv>
         <SearchIcon className="icon"/>
         <Input placeholder='Search'/>
      </InputDiv>
+     <WrapperTime>
      <Time>
-        <Hour className="date"/>
+      <Time.Info>
+          {(time.getHours() < 10 ? "0" : "") + time.getHours()}:
+          {(time.getMinutes() < 10 ? "0" : "") + time.getMinutes()}
+          <span className="time">{time.getHours() > 11 ? "PM" : "AM"}</span>
+      </Time.Info>
      </Time>
-      {/* <Date type='datetime-local' value={7} /> */}
-    {/* <NewDate /> */}
-    <Select className='lang' name="lang"> 
+     <Data type='date'  
+           min="2024-01-01"
+           max="2024-12-31"
+          defaultValue={time.toJSON().slice(0, 10)}>
+      </Data>
+     <Select className='lang' name="lang"> 
       <option value="uz">O'zbekcha</option>
       <option value="rus">Ruscha</option>
     </Select>
+    </WrapperTime>
     </Wrapper>
   )
 }

@@ -36,6 +36,12 @@ export const Input = styled.input`
   outline: none;
 `;
 
+export const WrapperTime = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+`;
+
 export const Time = styled.div`
   margin-left: 157px;
   width: 106px;
@@ -45,31 +51,42 @@ export const Time = styled.div`
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  margin-left: 157px;
-  margin-top: 4px;
+  margin-right: 30px;
 `;
 
-export const Date = styled.div`
-  width: 178px;
-  height: 40px;
-  padding: 10px 16px 10px 20px;
-  margin: 0px 16px;
+Time.Info = styled(Time)`
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  color: rgba(37, 62, 95, 1);
+  .time {
+    color: rgba(187, 195, 205, 1);
+    margin-left: 8px;
+  }
+`
+export const Data = styled.input`
   border-radius: 8px;
-  background-color: (250, 250, 250);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: rgba(37, 62, 95, 1);
+  cursor: pointer;
+  background-color: #f9f9f9;
+  padding: 10px 10px 10px 16px;
+  margin: 0 16px;
+  height: 40px;
   border: none;
 `;
 
 export const Select = styled.select`
-  position: absolute;
-  top: 10px;
-  right: 16px;
   width: 147px;
   height: 40px;
   padding: 10px 16px 10px 20px;
-  margin: 0px 16px;
   border-radius: 8px;
   background: rgb(250, 250, 250);
   color: rgb(37, 62, 95);
   border: none;
   outline: none;
+  margin-right: 16px;
 `;
